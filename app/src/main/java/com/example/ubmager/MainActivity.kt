@@ -10,14 +10,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.*
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,6 +20,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.ubmager.api.ApiClient
+import kotlinx.coroutines.launch
 
 // Model data untuk barang
 data class Item(
@@ -41,8 +36,110 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            UBMagerApp()
+            MaterialTheme {
+                AppNavigation()
+            }
         }
+    }
+}
+
+@Composable
+fun AppNavigation() {
+    var currentScreen by remember { mutableStateOf("login") }
+
+    when (currentScreen) {
+        "login" -> LoginScreen(
+            onNavigateToRegister = { currentScreen = "register" },
+            onLoginSuccess = { currentScreen = "main" }
+        )
+        "register" -> RegisterScreen(onNavigateToLogin = { currentScreen = "login" })
+        "main" -> UBMagerApp()
+    }
+}
+
+@Composable
+fun LoginScreen(onNavigateToRegister: () -> Unit, onLoginSuccess: () -> Unit) {
+    val coroutineScope = rememberCoroutineScope()
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+    var message by remember { mutableStateOf("") }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        TextField(value = email, onValueChange = { email = it }, label = { Text("Email") })
+        Spacer(modifier = Modifier.height(8.dp))
+        TextField(value = password, onValueChange = { password = it }, label = { Text("Password") })
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = {
+            coroutineScope.launch {
+                try {
+                    val response = ApiClient.apiService.login(email, password)
+                    ApiClient.setToken(response.token) // Simpan token
+                    message = "Login berhasil"
+                    onLoginSuccess() // Pindah ke halaman utama
+                } catch (e: Exception) {
+                    message = "Username atau password salah"
+                }
+            }
+        }) {
+            Text("Login")
+        }
+        Spacer(modifier = Modifier.height(8.dp))
+        TextButton(onClick = onNavigateToRegister) {
+            Text("Belum punya akun? Register")
+        }
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(message)
+    }
+}
+
+@Composable
+fun RegisterScreen(onNavigateToLogin: () -> Unit) {
+    val coroutineScope = rememberCoroutineScope()
+    var name by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+    var passwordConfirmation by remember { mutableStateOf("") }
+    var message by remember { mutableStateOf("") }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        TextField(value = name, onValueChange = { name = it }, label = { Text("Nama") })
+        Spacer(modifier = Modifier.height(8.dp))
+        TextField(value = email, onValueChange = { email = it }, label = { Text("Email") })
+        Spacer(modifier = Modifier.height(8.dp))
+        TextField(value = password, onValueChange = { password = it }, label = { Text("Password") })
+        Spacer(modifier = Modifier.height(8.dp))
+        TextField(value = passwordConfirmation, onValueChange = { passwordConfirmation = it }, label = { Text("Konfirmasi Password") })
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = {
+            coroutineScope.launch {
+                try {
+                    val response = ApiClient.apiService.register(name, email, password, passwordConfirmation)
+                    message = "Registrasi berhasil: ${response.message}"
+                } catch (e: Exception) {
+                    message = "Registrasi gagal: ${e.message}"
+                }
+            }
+        }) {
+            Text("Register")
+        }
+        Spacer(modifier = Modifier.height(8.dp))
+        TextButton(onClick = onNavigateToLogin) {
+            Text("Sudah punya akun? Login")
+        }
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(message)
     }
 }
 
