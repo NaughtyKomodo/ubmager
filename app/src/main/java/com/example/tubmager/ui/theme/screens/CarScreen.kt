@@ -1,0 +1,253 @@
+package com.example.tubmager.ui.theme.screens
+
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.example.tubmager.R
+import androidx.compose.ui.Alignment
+
+data class CarService(
+    val id: Int,
+    val name: String,
+    val price: String,
+    val image: Int,
+    val vehicleType: String,
+    val provider: String,
+    val rating: Float
+)
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun CarScreen(navController: NavController) {
+    val categories = listOf(
+        Category("Semua", isSelected = true),
+        Category("Taksi"),
+        Category("Antar Barang"),
+        Category("Sewa Mobil"),
+        Category("Perjalanan Antar Kota"),
+        Category("Perjalanan Bandara")
+    )
+
+    val services = listOf(
+        CarService(
+            id = 1,
+            name = "Taksi ke Kampus",
+            price = "Rp 50.000",
+            image = R.drawable.lorem,
+            vehicleType = "Mobil - Sedan",
+            provider = "Driver Mobil UB 1",
+            rating = 4.8f
+        ),
+        CarService(
+            id = 2,
+            name = "Antar Barang Besar",
+            price = "Rp 75.000",
+            image = R.drawable.lorem,
+            vehicleType = "Mobil - MPV",
+            provider = "Driver Mobil UB 2",
+            rating = 4.7f
+        ),
+        CarService(
+            id = 3,
+            name = "Sewa Mobil Harian",
+            price = "Rp 500.000",
+            image = R.drawable.lorem,
+            vehicleType = "Mobil - SUV",
+            provider = "Rental UB",
+            rating = 4.9f
+        ),
+        CarService(
+            id = 4,
+            name = "Perjalanan ke Surabaya",
+            price = "Rp 300.000",
+            image = R.drawable.lorem,
+            vehicleType = "Mobil - Minibus",
+            provider = "Driver Mobil UB 3",
+            rating = 4.6f
+        ),
+        CarService(
+            id = 5,
+            name = "Antar ke Bandara",
+            price = "Rp 200.000",
+            image = R.drawable.lorem,
+            vehicleType = "Mobil - Sedan",
+            provider = "Driver Mobil UB 4",
+            rating = 4.5f
+        )
+    )
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Car") },
+                navigationIcon = {
+                    IconButton(onClick = { navController.navigateUp() }) {
+                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                    }
+                },
+                actions = {
+                    IconButton(onClick = { /* Open history */ }) {
+                        Icon(Icons.Default.History, contentDescription = "History")
+                    }
+                    IconButton(onClick = { /* Open favorites */ }) {
+                        Icon(Icons.Default.Favorite, contentDescription = "Favorites")
+                    }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color(0xFF0D87C0),
+                    titleContentColor = Color.White,
+                    navigationIconContentColor = Color.White,
+                    actionIconContentColor = Color.White
+                )
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+        ) {
+            SearchAndFilter("Cari layanan mobil...")
+            CategoryList(categories = categories)
+            CarList(services = services)
+        }
+    }
+}
+
+@Composable
+fun CarList(services: List<CarService>) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = "Layanan Mobil Terbaru",
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp
+            )
+
+            TextButton(onClick = { /* View all */ }) {
+                Text(
+                    text = "Lihat Semua",
+                    color = Color(0xFF0D87C0),
+                    fontSize = 14.sp
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        LazyColumn(
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            items(services.size) { index ->
+                CarServiceItem(service = services[index])
+            }
+
+            item {
+                Spacer(modifier = Modifier.height(16.dp))
+            }
+        }
+    }
+}
+
+@Composable
+fun CarServiceItem(service: CarService) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(120.dp)
+            .clickable { /* Navigate to service detail */ },
+        shape = RoundedCornerShape(8.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    ) {
+        Row(modifier = Modifier.fillMaxSize()) {
+            Image(
+                painter = painterResource(id = service.image),
+                contentDescription = service.name,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .width(120.dp)
+                    .fillMaxHeight()
+            )
+
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(12.dp)
+            ) {
+                Text(
+                    text = service.name,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 14.sp,
+                    maxLines = 2
+                )
+
+                Text(
+                    text = service.price,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp,
+                    color = Color(0xFF0D87C0),
+                    modifier = Modifier.padding(vertical = 4.dp)
+                )
+
+                Text(
+                    text = service.vehicleType,
+                    fontSize = 12.sp,
+                    color = Color.Gray
+                )
+
+                Spacer(modifier = Modifier.weight(1f))
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = service.provider,
+                        fontSize = 12.sp,
+                        color = Color.DarkGray
+                    )
+
+                    Spacer(modifier = Modifier.weight(1f))
+
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Rating",
+                        tint = Color(0xFFFFC107),
+                        modifier = Modifier.size(14.dp)
+                    )
+
+                    Spacer(modifier = Modifier.width(2.dp))
+
+                    Text(
+                        text = service.rating.toString(),
+                        fontSize = 12.sp,
+                        color = Color.DarkGray
+                    )
+                }
+            }
+        }
+    }
+}
