@@ -82,7 +82,7 @@ fun ProfilScreen(navController: NavController) {
 
                 // Mitra UBMager Button
                 Button(
-                    onClick = { /* Placeholder for future Mitra UBMager feature */ },
+                    onClick = { navController.navigate("seller_profile") },
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(48.dp),

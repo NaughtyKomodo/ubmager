@@ -1,8 +1,10 @@
 package com.example.tubmager
 
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -15,6 +17,7 @@ import com.example.tubmager.ui.theme.UBMagerTheme
 import com.example.tubmager.ui.theme.screens.*
 
 class MainActivity : ComponentActivity() {
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -30,6 +33,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.M)
 @Composable
 fun UBMagerApp() {
     val navController = rememberNavController()
@@ -40,6 +44,7 @@ fun UBMagerApp() {
     ) {
         composable("onboarding") { OnboardingScreen(navController) }
         composable("login") { LoginScreen(navController) }
+        composable("register") { RegisterScreen(navController) }
         composable("home") { HomeScreen(navController) }
         composable("jastip") { JastipScreen(navController) }
         composable("shop") { ShopScreen(navController) }
@@ -57,5 +62,6 @@ fun UBMagerApp() {
         }
         composable("riwayat") { RiwayatScreen(navController) }
         composable("profil") { ProfilScreen(navController) }
+        composable("seller_profile") { SellerProfileScreen(navController) }
     }
 }

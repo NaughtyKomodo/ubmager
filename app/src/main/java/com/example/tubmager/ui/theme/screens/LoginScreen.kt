@@ -154,11 +154,15 @@ fun LoginScreen(navController: NavController) {
                 color = Color.Gray
             )
             Spacer(modifier = Modifier.width(4.dp))
-            Text(
-                text = "Daftar Akun",
-                color = Color(0xFF0D87C0),
-                fontWeight = FontWeight.Medium
-            )
+            TextButton(
+                onClick = { navController.navigate("register") }
+            ) {
+                Text(
+                    text = "Daftar Akun",
+                    color = Color(0xFF0D87C0),
+                    fontWeight = FontWeight.Medium
+                )
+            }
         }
 
         Spacer(modifier = Modifier.weight(1f))
