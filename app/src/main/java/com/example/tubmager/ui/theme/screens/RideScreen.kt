@@ -47,7 +47,7 @@ fun RideScreen(navController: NavController) {
             id = 1,
             name = "Ojek ke Kampus",
             price = "Rp 15.000",
-            image = R.drawable.lorem,
+            image = R.drawable.ub,
             vehicleType = "Motor - Matic",
             provider = "Driver UB 1",
             rating = 4.9f
@@ -56,7 +56,7 @@ fun RideScreen(navController: NavController) {
             id = 2,
             name = "Antar Paket Kecil",
             price = "Rp 20.000",
-            image = R.drawable.lorem,
+            image = R.drawable.paket,
             vehicleType = "Motor - Sport",
             provider = "Driver UB 2",
             rating = 4.7f
@@ -65,7 +65,7 @@ fun RideScreen(navController: NavController) {
             id = 3,
             name = "Antar Makanan",
             price = "Rp 18.000",
-            image = R.drawable.lorem,
+            image = R.drawable.makanan,
             vehicleType = "Motor - Matic",
             provider = "Driver UB 3",
             rating = 4.8f
@@ -74,7 +74,7 @@ fun RideScreen(navController: NavController) {
             id = 4,
             name = "Perjalanan ke Stasiun",
             price = "Rp 25.000",
-            image = R.drawable.lorem,
+            image = R.drawable.stasiun,
             vehicleType = "Motor - Matic",
             provider = "Driver UB 4",
             rating = 4.6f
@@ -83,7 +83,7 @@ fun RideScreen(navController: NavController) {
             id = 5,
             name = "Ojek Malam",
             price = "Rp 22.000",
-            image = R.drawable.lorem,
+            image = R.drawable.malam,
             vehicleType = "Motor - Sport",
             provider = "Driver UB 5",
             rating = 4.5f

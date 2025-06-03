@@ -47,7 +47,7 @@ fun CleaningScreen(navController: NavController) {
             id = 1,
             name = "Pembersihan Kamar",
             price = "Rp 50.000",
-            image = R.drawable.lorem,
+            image = R.drawable.clean,
             area = "Kamar - 10m²",
             provider = "Clean UB 1",
             rating = 4.8f
@@ -56,7 +56,7 @@ fun CleaningScreen(navController: NavController) {
             id = 2,
             name = "Pembersihan Kos",
             price = "Rp 150.000",
-            image = R.drawable.lorem,
+            image = R.drawable.clean,
             area = "Kos - 50m²",
             provider = "Clean UB 2",
             rating = 4.7f
@@ -65,7 +65,7 @@ fun CleaningScreen(navController: NavController) {
             id = 3,
             name = "Pembersihan Kantor",
             price = "Rp 200.000",
-            image = R.drawable.lorem,
+            image = R.drawable.clean,
             area = "Kantor - 100m²",
             provider = "Clean UB 3",
             rating = 4.9f
@@ -74,7 +74,7 @@ fun CleaningScreen(navController: NavController) {
             id = 4,
             name = "Cuci Motor",
             price = "Rp 30.000",
-            image = R.drawable.lorem,
+            image = R.drawable.clean,
             area = "Kendaraan - Motor",
             provider = "Clean UB 4",
             rating = 4.6f
@@ -83,7 +83,7 @@ fun CleaningScreen(navController: NavController) {
             id = 5,
             name = "Cuci Mobil",
             price = "Rp 60.000",
-            image = R.drawable.lorem,
+            image = R.drawable.clean,
             area = "Kendaraan - Mobil",
             provider = "Clean UB 5",
             rating = 4.5f

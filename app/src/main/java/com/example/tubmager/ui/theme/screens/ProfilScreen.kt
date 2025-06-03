@@ -54,7 +54,7 @@ fun ProfilScreen(navController: NavController) {
             ) {
                 // Profile Picture
                 Image(
-                    painter = painterResource(id = R.drawable.lorem),
+                    painter = painterResource(id = R.drawable.foto),
                     contentDescription = "Profile Picture",
                     modifier = Modifier
                         .size(100.dp)
@@ -65,7 +65,7 @@ fun ProfilScreen(navController: NavController) {
 
                 // Name
                 Text(
-                    text = "John Doe",
+                    text = "Suharto JR",
                     fontWeight = FontWeight.Bold,
                     fontSize = 20.sp,
                     color = Color.Black
@@ -73,7 +73,7 @@ fun ProfilScreen(navController: NavController) {
 
                 // Email
                 Text(
-                    text = "john.doe@ub.ac.id",
+                    text = "suhartoganz@ub.ac.id",
                     fontSize = 14.sp,
                     color = Color.Gray
                 )

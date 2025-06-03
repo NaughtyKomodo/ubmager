@@ -47,7 +47,7 @@ fun PindahinScreen(navController: NavController) {
             id = 1,
             name = "Pindah Kos Mahasiswa",
             price = "Rp 200.000",
-            image = R.drawable.lorem,
+            image = R.drawable.lala,
             vehicleType = "Pick-up",
             provider = "Pindah UB 1",
             rating = 4.8f
@@ -56,7 +56,7 @@ fun PindahinScreen(navController: NavController) {
             id = 2,
             name = "Pindah Rumah Kecil",
             price = "Rp 500.000",
-            image = R.drawable.lorem,
+            image = R.drawable.lala,
             vehicleType = "Truk Kecil",
             provider = "Pindah UB 2",
             rating = 4.7f
@@ -65,7 +65,7 @@ fun PindahinScreen(navController: NavController) {
             id = 3,
             name = "Angkut Perabot",
             price = "Rp 300.000",
-            image = R.drawable.lorem,
+            image = R.drawable.lala,
             vehicleType = "Van",
             provider = "Pindah UB 3",
             rating = 4.9f
@@ -74,7 +74,7 @@ fun PindahinScreen(navController: NavController) {
             id = 4,
             name = "Sewa Truk Besar",
             price = "Rp 1.000.000",
-            image = R.drawable.lorem,
+            image = R.drawable.lala,
             vehicleType = "Truk Besar",
             provider = "Pindah UB 4",
             rating = 4.6f
@@ -83,7 +83,7 @@ fun PindahinScreen(navController: NavController) {
             id = 5,
             name = "Pindah Barang Elektronik",
             price = "Rp 250.000",
-            image = R.drawable.lorem,
+            image = R.drawable.lala,
             vehicleType = "Pick-up",
             provider = "Pindah UB 5",
             rating = 4.5f

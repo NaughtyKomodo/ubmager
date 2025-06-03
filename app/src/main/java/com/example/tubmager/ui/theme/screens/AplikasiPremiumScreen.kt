@@ -46,7 +46,7 @@ fun AplikasiPremiumScreen(navController: NavController) {
             id = 1,
             name = "Paket Premium Bulanan",
             price = "Rp 50.000",
-            image = R.drawable.lorem,
+            image = R.drawable.apk,
             duration = "1 Bulan",
             provider = "UBMager Official",
             rating = 4.9f
@@ -55,7 +55,7 @@ fun AplikasiPremiumScreen(navController: NavController) {
             id = 2,
             name = "Paket Premium Tahunan",
             price = "Rp 500.000",
-            image = R.drawable.lorem,
+            image = R.drawable.apk,
             duration = "12 Bulan",
             provider = "UBMager Official",
             rating = 4.8f
@@ -64,7 +64,7 @@ fun AplikasiPremiumScreen(navController: NavController) {
             id = 3,
             name = "Akses Fitur Eksklusif",
             price = "Rp 75.000",
-            image = R.drawable.lorem,
+            image = R.drawable.apk,
             duration = "3 Bulan",
             provider = "UBMager Official",
             rating = 4.7f
@@ -73,7 +73,7 @@ fun AplikasiPremiumScreen(navController: NavController) {
             id = 4,
             name = "Diskon Layanan Premium",
             price = "Rp 30.000",
-            image = R.drawable.lorem,
+            image = R.drawable.apk,
             duration = "1 Bulan",
             provider = "UBMager Official",
             rating = 4.6f
@@ -82,7 +82,7 @@ fun AplikasiPremiumScreen(navController: NavController) {
             id = 5,
             name = "Paket Premium Mahasiswa",
             price = "Rp 25.000",
-            image = R.drawable.lorem,
+            image = R.drawable.apk,
             duration = "1 Bulan",
             provider = "UBMager Official",
             rating = 4.5f

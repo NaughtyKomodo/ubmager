@@ -11,12 +11,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.rounded.AccountCircle
-import androidx.compose.material.icons.rounded.Home
-import androidx.compose.material.icons.rounded.History
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -27,7 +23,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.tubmager.R
 
 data class Service(val name: String, val icon: Int, val route: String)
@@ -47,10 +42,10 @@ fun HomeScreen(navController: NavController) {
     )
 
     val restaurants = listOf(
-        Restaurant("Kanemakan", R.drawable.lorem, "0.31 km", "Snacks, Bakery, Sweets", 5.0f),
-        Restaurant("Ikhana Kitchen", R.drawable.lorem, "1.04 km", "Snacks, Japanese, Savory", 4.9f),
-        Restaurant("Warung Makan Sederhana", R.drawable.lorem, "0.8 km", "Indonesian, Rice", 4.5f),
-        Restaurant("Cafe Modern", R.drawable.lorem, "1.2 km", "Coffee, Pastry", 4.7f)
+        Restaurant("Kanemakan", R.drawable.kanenakan, "0.31 km", "Snacks, Bakery, Sweets", 5.0f),
+        Restaurant("Ikhana Kitchen", R.drawable.ikhana, "1.04 km", "Snacks, Japanese, Savory", 4.9f),
+        Restaurant("Warung Makan Sederhana", R.drawable.es, "0.8 km", "Indonesian, Rice", 4.5f),
+        Restaurant("Cafe Modern", R.drawable.kanenakan, "1.2 km", "Coffee, Pastry", 4.7f)
     )
 
     Box(modifier = Modifier.fillMaxSize()) {

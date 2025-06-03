@@ -48,7 +48,7 @@ fun JastipScreen(navController: NavController) {
             id = 1,
             name = "Nasi Goreng Spesial",
             price = "Rp 25.000",
-            image = R.drawable.lorem,
+            image = R.drawable.nasgor,
             condition = "Segar - Siap Antar",
             provider = "Warung Makan Sederhana",
             rating = 4.8f
@@ -57,7 +57,7 @@ fun JastipScreen(navController: NavController) {
             id = 2,
             name = "Es Teh Manis",
             price = "Rp 8.000",
-            image = R.drawable.lorem,
+            image = R.drawable.teh,
             condition = "Dingin - Kemasan",
             provider = "Kafe Brawijaya",
             rating = 4.7f
@@ -66,7 +66,7 @@ fun JastipScreen(navController: NavController) {
             id = 3,
             name = "Minyak Goreng 1L",
             price = "Rp 18.000",
-            image = R.drawable.lorem,
+            image = R.drawable.minyak,
             condition = "Baru - Tersegel",
             provider = "Minimarket FEB",
             rating = 4.9f
@@ -75,7 +75,7 @@ fun JastipScreen(navController: NavController) {
             id = 4,
             name = "Baju Kaos Polos",
             price = "Rp 50.000",
-            image = R.drawable.lorem,
+            image = R.drawable.baju,
             condition = "Baru - Ready Stock",
             provider = "Toko Fashion UB",
             rating = 4.6f
@@ -84,7 +84,7 @@ fun JastipScreen(navController: NavController) {
             id = 5,
             name = "Charger USB-C",
             price = "Rp 75.000",
-            image = R.drawable.lorem,
+            image = R.drawable.charger,
             condition = "Baru - Original",
             provider = "Elektronik Teknik",
             rating = 4.5f

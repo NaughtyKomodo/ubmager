@@ -33,7 +33,7 @@ fun DetailJastipScreen(navController: NavController, itemId: String?) {
             id = 1,
             name = "Nasi Goreng Spesial",
             price = "Rp 25.000",
-            image = R.drawable.lorem,
+            image = R.drawable.nasgor,
             condition = "Segar - Siap Antar",
             provider = "Warung Makan Sederhana",
             rating = 4.8f

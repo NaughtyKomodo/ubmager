@@ -30,7 +30,7 @@ fun LoginScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(32.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.lorem),
+            painter = painterResource(id = R.drawable.logo),
             contentDescription = "UBMager Logo",
             modifier = Modifier
                 .size(80.dp)

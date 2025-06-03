@@ -56,7 +56,7 @@ fun RegisterScreen(navController: NavController) {
         ) {
             // Logo or App Icon
             Image(
-                painter = painterResource(id = R.drawable.lorem),
+                painter = painterResource(id = R.drawable.foto),
                 contentDescription = "UBMager Logo",
                 modifier = Modifier
                     .size(80.dp)

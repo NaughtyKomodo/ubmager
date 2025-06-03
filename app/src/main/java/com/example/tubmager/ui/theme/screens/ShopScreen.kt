@@ -48,7 +48,7 @@ fun ShopScreen(navController: NavController) {
             id = 1,
             name = "Laptop Bekas Asus i5 Gen 10",
             price = "Rp 6.500.000",
-            image = R.drawable.lorem,
+            image = R.drawable.laptop,
             condition = "Bekas - Seperti Baru",
             seller = "John Store",
             rating = 4.8f
@@ -57,7 +57,7 @@ fun ShopScreen(navController: NavController) {
             id = 2,
             name = "Arduino Uno R3 Paket Lengkap",
             price = "Rp 250.000",
-            image = R.drawable.lorem,
+            image = R.drawable.arduino,
             condition = "Baru",
             seller = "Elektronik Teknik",
             rating = 4.7f
@@ -66,7 +66,7 @@ fun ShopScreen(navController: NavController) {
             id = 3,
             name = "Kalkulator Scientific Casio",
             price = "Rp 150.000",
-            image = R.drawable.lorem,
+            image = R.drawable.kalkulator,
             condition = "Bekas - Baik",
             seller = "Tech Shop",
             rating = 4.9f
@@ -75,7 +75,7 @@ fun ShopScreen(navController: NavController) {
             id = 4,
             name = "Buku Algoritma & Pemrograman",
             price = "Rp 85.000",
-            image = R.drawable.lorem,
+            image = R.drawable.algo,
             condition = "Bekas - Baik",
             seller = "Buku Filkom",
             rating = 4.5f
@@ -84,7 +84,7 @@ fun ShopScreen(navController: NavController) {
             id = 5,
             name = "Headphone Gaming RGB",
             price = "Rp 350.000",
-            image = R.drawable.lorem,
+            image = R.drawable.headphone,
             condition = "Baru",
             seller = "Game Store",
             rating = 4.6f

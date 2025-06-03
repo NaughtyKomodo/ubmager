@@ -47,7 +47,7 @@ fun KirimBarangScreen(navController: NavController) {
             id = 1,
             name = "Kirim Dokumen Kampus",
             price = "Rp 10.000",
-            image = R.drawable.lorem,
+            image = R.drawable.dokumen,
             packageType = "Dokumen - A4",
             provider = "Kurir UB 1",
             rating = 4.9f
@@ -56,7 +56,7 @@ fun KirimBarangScreen(navController: NavController) {
             id = 2,
             name = "Paket Kecil Elektronik",
             price = "Rp 25.000",
-            image = R.drawable.lorem,
+            image = R.drawable.paket,
             packageType = "Paket - <5kg",
             provider = "Kurir UB 2",
             rating = 4.7f
@@ -65,7 +65,7 @@ fun KirimBarangScreen(navController: NavController) {
             id = 3,
             name = "Paket Besar Mebel",
             price = "Rp 100.000",
-            image = R.drawable.lorem,
+            image = R.drawable.paket,
             packageType = "Kargo - >10kg",
             provider = "Kurir UB 3",
             rating = 4.8f
@@ -74,7 +74,7 @@ fun KirimBarangScreen(navController: NavController) {
             id = 4,
             name = "Ekspres Antar Kota",
             price = "Rp 50.000",
-            image = R.drawable.lorem,
+            image = R.drawable.paket,
             packageType = "Paket - <3kg",
             provider = "Kurir UB 4",
             rating = 4.6f
@@ -83,7 +83,7 @@ fun KirimBarangScreen(navController: NavController) {
             id = 5,
             name = "Kirim Bahan Makanan",
             price = "Rp 30.000",
-            image = R.drawable.lorem,
+            image = R.drawable.paket,
             packageType = "Paket - Dingin",
             provider = "Kurir UB 5",
             rating = 4.5f

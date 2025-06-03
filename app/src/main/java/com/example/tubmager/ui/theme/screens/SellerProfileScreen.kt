@@ -65,7 +65,7 @@ fun SellerProfileScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(id = R.drawable.lorem),
+                painter = painterResource(id = R.drawable.foto),
                 contentDescription = "Seller Profile Picture",
                 modifier = Modifier
                     .size(100.dp)
@@ -73,13 +73,13 @@ fun SellerProfileScreen(navController: NavController) {
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
-                text = "John Doe (Penjual)",
+                text = "Suharto JR (Penjual)",
                 fontWeight = FontWeight.Bold,
                 fontSize = 20.sp,
                 color = Color.Black
             )
             Text(
-                text = "john.doe@ub.ac.id",
+                text = "suhartoganz@ub.ac.id",
                 fontSize = 14.sp,
                 color = Color.Gray
             )
@@ -205,7 +205,7 @@ fun AddProductDialog(onDismiss: () -> Unit, onAddProduct: () -> Unit) {
                 // Image Preview (if selected)
                 if (selectedImageUri != null) {
                     Image(
-                        painter = painterResource(id = R.drawable.lorem), // Placeholder
+                        painter = painterResource(id = R.drawable.foto), // Placeholder
                         contentDescription = "Selected Product Image",
                         modifier = Modifier
                             .size(100.dp)
@@ -230,7 +230,7 @@ fun AddProductDialog(onDismiss: () -> Unit, onAddProduct: () -> Unit) {
                             Icon(Icons.Default.PhotoLibrary, contentDescription = "Gallery", tint = Color.White)
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(
-                                text = if (selectedImageUri == null) "Pilih Foto" else "Ganti Foto",
+                                text = if (selectedImageUri == null) "pilih" else "foto",
                                 color = Color.White,
                                 fontSize = 14.sp
                             )
@@ -264,7 +264,7 @@ fun AddProductDialog(onDismiss: () -> Unit, onAddProduct: () -> Unit) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Icon(Icons.Default.CameraAlt, contentDescription = "Camera", tint = Color.White)
                             Spacer(modifier = Modifier.width(4.dp))
-                            Text("Kamera", color = Color.White, fontSize = 14.sp)
+                            Text("foto", color = Color.White, fontSize = 14.sp)
                         }
                     }
                 }

@@ -47,7 +47,7 @@ fun CarScreen(navController: NavController) {
             id = 1,
             name = "Taksi ke Kampus",
             price = "Rp 50.000",
-            image = R.drawable.lorem,
+            image = R.drawable.ub,
             vehicleType = "Mobil - Sedan",
             provider = "Driver Mobil UB 1",
             rating = 4.8f
@@ -56,7 +56,7 @@ fun CarScreen(navController: NavController) {
             id = 2,
             name = "Antar Barang Besar",
             price = "Rp 75.000",
-            image = R.drawable.lorem,
+            image = R.drawable.paket,
             vehicleType = "Mobil - MPV",
             provider = "Driver Mobil UB 2",
             rating = 4.7f
@@ -65,7 +65,7 @@ fun CarScreen(navController: NavController) {
             id = 3,
             name = "Sewa Mobil Harian",
             price = "Rp 500.000",
-            image = R.drawable.lorem,
+            image = R.drawable.mobi,
             vehicleType = "Mobil - SUV",
             provider = "Rental UB",
             rating = 4.9f
@@ -74,7 +74,7 @@ fun CarScreen(navController: NavController) {
             id = 4,
             name = "Perjalanan ke Surabaya",
             price = "Rp 300.000",
-            image = R.drawable.lorem,
+            image = R.drawable.minibus,
             vehicleType = "Mobil - Minibus",
             provider = "Driver Mobil UB 3",
             rating = 4.6f
@@ -83,7 +83,7 @@ fun CarScreen(navController: NavController) {
             id = 5,
             name = "Antar ke Bandara",
             price = "Rp 200.000",
-            image = R.drawable.lorem,
+            image = R.drawable.bandara,
             vehicleType = "Mobil - Sedan",
             provider = "Driver Mobil UB 4",
             rating = 4.5f

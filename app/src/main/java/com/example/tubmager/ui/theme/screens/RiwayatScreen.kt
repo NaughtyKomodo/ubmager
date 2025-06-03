@@ -43,7 +43,7 @@ fun RiwayatScreen(navController: NavController) {
             status = "Selesai",
             provider = "Warung Makan Sederhana",
             date = "12 Mei 2025",
-            image = R.drawable.lorem
+            image = R.drawable.nasgor
         ),
         HistoryItem(
             id = 2,
@@ -52,7 +52,7 @@ fun RiwayatScreen(navController: NavController) {
             status = "Dalam Proses",
             provider = "Kafe Brawijaya",
             date = "10 Mei 2025",
-            image = R.drawable.lorem
+            image = R.drawable.teh
         )
     )
 
